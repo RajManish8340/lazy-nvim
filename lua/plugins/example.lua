@@ -8,9 +8,39 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 vim.g.lazyvim_check_order = false
+vim.opt.scrolloff = 10
 return {
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     style = "storm", -- night | storm | moon | day
+  --     transparent = false,
+  --     terminal_colors = true,
+  --   },
+  -- },
+  --
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "tokyonight",
+  --   },
+  -- },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
+  {
+    "folke/noice.nvim",
+    opts = {
+      lsp = { progress = { enabled = true } },
+      routes = {
+        {
+          filter = { event = "msg_showmode" },
+          view = "notify",
+        },
+      },
+    },
+  },
 
   -- Configure LazyVim to load gruvbox
   {
