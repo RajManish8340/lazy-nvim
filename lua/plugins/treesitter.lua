@@ -20,6 +20,7 @@ return {
         "vim",
         "yaml",
         "rust",
+        "prisma",
       })
     end,
   },
