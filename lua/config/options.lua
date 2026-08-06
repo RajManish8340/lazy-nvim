@@ -3,6 +3,10 @@
 -- Add any additional options here
 
 vim.opt.scrolloff = 10
+vim.opt.colorcolumn = "100"
+
+vim.opt.wrap = true
+vim.opt.linebreak = true -- Wraps at word boundaries instead of splitting words
 
 -- Ctrl+F – standard session picker
 vim.keymap.set("n", "<M-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { noremap = true, silent = true })
